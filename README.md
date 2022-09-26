@@ -18,6 +18,10 @@ Rust can be easily installed on Linux, Windows, and Mac. It comes with package m
 
 Rust can also be easily compiled into binaries for Windows, Mac, and Linux. It can also be compiled into WebAssembly and run in the browser.
 
+## The Rusting Project
+
+The rusting project is an intitative by myself to learn Rust and to implement all the data stuctures and algorithms prescribed by the KTU syllabus (maybe even more) for Data Structures CS205. The project is open source and is available on GitHub and I hope that this may be usefull for anyone who find this :).
+
 ## Project Log
 
 | Date | Activity |
