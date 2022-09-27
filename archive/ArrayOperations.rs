@@ -41,7 +41,6 @@ fn add(n: &mut i32) {
     let indx: usize = read!();
     unsafe {
         for j in 0..*n as usize {
-            println!("debug");
             let i = *n as usize - j;
             ARRAY[i] = ARRAY[i - 1];
             if i as usize == indx {
@@ -60,18 +59,18 @@ fn delete(n: &mut i32) {
     println!("Enter the Index to which the element is to be deleted");
     let indx: usize = read!();
     for i in indx..*n as usize {
-            unsafe {
+        unsafe {
             ARRAY[i] = ARRAY[i + 1];
-            }
         }
+    }
     println!("{} Updated to {}", *n, *n + 1);
     *n -= 1;
 }
-fn sum(n:i32) {
-    let mut sum=0;
+fn sum(n: i32) {
+    let mut sum = 0;
     for i in 0..n as usize {
         unsafe {
-            sum+=ARRAY[i];
+            sum += ARRAY[i];
         }
     }
     println!("Sum of elements of the array is {sum}");
