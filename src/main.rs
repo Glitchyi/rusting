@@ -1,3 +1,3 @@
 fn main(){
-    println!("Hello GDSC");
+    println!("Hello Krustations");
 }

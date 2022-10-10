@@ -12,9 +12,9 @@ macro_rules! read {
 }
 
 fn main() {
-    binarysort();
+    binarysearch();
 }
-fn binarysort() {
+fn binarysearch() {
     const N:usize = 5 ;
     let mut array: [i32; N] = [0; N];
     println!("Enter array elements:");
