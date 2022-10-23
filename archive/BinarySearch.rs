@@ -1,16 +1,4 @@
-macro_rules! read {
-    ($out:ident as i32) => {
-        let mut input_text = String::new();
-        std::io::stdin()
-            .read_line(&mut input_text)
-            .expect("failed to read from stdin");
-        let $out = input_text
-            .trim()
-            .parse::<i32>()
-            .expect("Value inputed it not a integer");
-    };
-}
-
+use text_io::read;
 fn main() {
     binarysearch();
 }
@@ -19,13 +7,13 @@ fn binarysearch() {
     let mut array: [i32; N] = [0; N];
     println!("Enter array elements:");
     for i in 0..N {
-        read!(x as i32);
+        let x:i32=read!();
         array[i] = x;
     }
     println!("Array complete");
     let (mut ll, mut ul) = (0, array.len() as i32);
     let mut mid = (ll + ul) / 2;
-    read!(qu as i32);
+    let qu:i32 = read!();
     let mut flag = true;
     for _i in 0..N {
         if qu == array[mid as usize] {

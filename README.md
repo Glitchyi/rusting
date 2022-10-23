@@ -30,3 +30,4 @@ The rusting project is an intitative by myself to learn Rust and to implement al
 | 24/09/2022| Binary Search |
 | 27/09/2022| Rust Crate & toml file |
 | 27/09/2022| Array CRUD Operations |
+| 23/10/2022| Polynomial Representation in Vectors |
