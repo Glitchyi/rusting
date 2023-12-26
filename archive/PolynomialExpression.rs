@@ -1,5 +1,6 @@
+use std::io::Write;
+
 // Polynomial using Array
-use text_io::read;
 #[derive(Debug)]
 struct Polynomial {
     coeff: i32,
@@ -11,17 +12,25 @@ impl Polynomial {
     }
 }
 
+fn read() -> i32 {
+    std::io::stdout().flush().unwrap();
+    let mut buf = String::new();
+    std::io::stdin().read_line(&mut buf).unwrap();
+
+    buf.trim().parse().unwrap()
+}
+
 fn main() {
     print!("Degree of polynomial: ");
-    let n: usize = read!();
+    let n = read() as usize;
     let mut p1: Vec<Polynomial> = (0..n).map(|_| Polynomial::new()).collect();
     let mut i: usize = 0;
     println!("First");
     while i < n {
         print!("Coefficent: ");
-        p1[i].coeff = read!();
+        p1[i].coeff = read();
         print!(r#"Exponent: "#);
-        p1[i].expo = read!();
+        p1[i].expo = read();
         i += 1;
     }
     println!();
